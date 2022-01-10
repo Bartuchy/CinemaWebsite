@@ -1,0 +1,348 @@
+
+/*Główne elemenety*/
+body{
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Staatliches', cursive;
+}
+
+footer{
+    text-align: center;
+    width: 70%;
+    background: lightgray;
+}
+
+img{
+    width: 100%;
+    justify-content: left;
+}
+
+header{
+    text-align: center;
+}
+
+figure{
+    display: inline-block;
+    flex-grow: 1;
+    margin: 8px;
+}
+
+figcaption{
+    text-align: center;
+    margin: 0 10px;
+}
+
+hr{
+    background: 5px black;
+    width: 95%;
+}
+
+h2{   
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/*Głowne kontenery*/
+#calosc{
+    height: 90%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #2D63B8;
+}
+#kontener{
+    margin: 20px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+}
+
+#baner{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+}
+/*edycja header*/
+#mainBanner{
+    width: 400%;
+    display: flex;
+}
+
+#miniaturki{
+    display: flex;
+    flex-direction: column;
+}
+
+.navImg{
+    margin: 0;
+    height: 110%;
+    flex-basis: 100%;
+}
+
+.navImg img{
+    height: 100%;
+}
+
+#mainImg{
+    width: 100%;
+}
+
+/* pasek nawigacyjny*/
+#nawigacyjny{
+    background-color: #2D63B8;
+}
+
+#nav{
+    text-align: center;
+    overflow: hidden;
+}
+
+li#last{
+    border-right: 1px solid black;
+}
+
+ul#nav li {
+    list-style-type: none;
+    background: #2D63B8;
+    color: white;
+    border-left: 1px solid black;
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+
+ul#nav li a {
+    display : list-item;
+    padding : 4pt;
+    text-decoration : none;
+}
+
+ul#nav{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    padding: 0;
+    margin: 20px auto;
+}
+
+ul#nav li ul {
+    overflow: hidden;
+    display: none;
+}
+
+ul#nav li:hover ul {
+    position: absolute;
+    background: transparent;
+    padding: 0;
+    display: block;
+    width: 170px;
+}
+
+ul#nav li:hover {
+    background: #3777DD;
+    cursor: pointer;
+}
+/* edycja tabeli repertuar*/
+table tr td:nth-child(even), th:nth-child(even){
+    background-color: #EEE;
+    border: 2px solid #EEE;
+}
+
+table tr td:nth-child(odd){
+    border: 2px solid white;
+}
+
+#dynamic{
+    text-align: center;
+    overflow-x: auto;
+    list-style-position: inside;
+}
+
+table#rep, table#cen{
+    width: 95%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#polecane, #zapowiedzi{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+#plakaty, #zwiastuny{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #EEE;
+    margin: 0 30px;
+    cursor: pointer;
+}
+
+a.godzina:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+.plakat{
+    height: 80%;
+}
+
+.zwiastun{
+    width: 90%;
+    margin: 5px;
+}
+
+figure img.plakat:hover{
+    opacity: 0.7;
+}
+
+td.tytul:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+/* fromularz*/
+
+.radio, .check{
+    margin-left: 15px;
+}
+
+table#form{
+    width: 70%;
+    margin: 0 15%;
+}
+
+input{
+    margin: 3px;
+}
+
+select{
+    width: 75%;
+}
+
+.button{
+    margin: 5px;
+    border-radius: 4px;
+}
+
+table#rezerwacja{
+    width: 95%;
+    margin: auto;
+}
+
+input#date{
+    width: 75%;
+}
+
+/* pasek logowania */
+.log-bar{
+    text-align: center;
+    width: 70%;
+    background:#3777DD;
+}
+
+p{
+    float: right;
+    margin: 3px 8px;
+}
+
+a.reg-form:hover, a.log-form:hover{
+    color: white;
+    cursor: pointer;
+}
+
+a.logout{
+    text-decoration: none;
+    color: black;
+}
+
+a.logout:hover, a.prof-form:hover{
+    color: white;
+    cursor: pointer;
+}
+
+p.ticket{
+    display: none;
+}
+
+@media screen and (max-width: 1007px){
+    ul#nav li{
+        text-align: center;
+        margin: 5px 0;
+        flex-basis: 40%;
+    }
+    
+    ul#nav{
+        flex-wrap: wrap;
+    }
+    
+    #media{
+        border-right: 1px solid black;
+    }
+    
+    #polecane #plakaty, #zapowiedzi #zwiastuny{
+        flex-wrap: wrap;
+    }
+    
+    #polecane figure{
+        flex-basis: 20%;
+    }
+    
+    #zapowiedzi figure{
+        flex-basis: 45%;
+    }
+}
+
+@media screen and (max-width: 850px){
+    #baner{
+        flex-direction: column;
+    }
+    
+    #mainBanner{
+        width: 100%;
+    }
+    
+    #miniaturki{
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 600px){
+    ul#nav li{
+        text-align: center;
+        flex-basis: 70%;
+        font-size: 110%;
+    }
+    
+    nav#menu{
+        display: flex;
+        justify-content: center;
+    }
+    
+    #polecane #plakaty, #zapowiedzi #zwiastuny{
+        flex-wrap: wrap;
+    }
+    
+    #polecane figure{
+        flex-basis: 50%;
+    }
+    
+    ul#nav li{
+        border-right: 1px solid black;
+    }
+}

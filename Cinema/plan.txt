@@ -1,0 +1,63 @@
+CEL 1:
+	Dodanie przycisków na samej górze strony umożliwiających logowanie i rejestację
+DZIAŁANIE 1:
+	-Wyskakujący popup window z formularzem logowania/rejestracji,
+	identyczny jak przy rezerwacji biletu z projektu początkowego(patrz cel 3)
+
+CEL 2:
+	Utworzenie bazy danych aby umożliwić rejestację i logowanie
+DZIAŁANIE:
+	Zostaje utworzona baza 'Cinema' z tabelami: 'logged_in_users', 'users', 'tickets'
+	-logged_in_users: sessionId, userId,  lastUpdate(date)
+	-users: id, imie, nazwisko, wiek, email, nr_tel, passwd
+	-tickets: id, data, język, szczegóły, płatność, userId
+CEL 3:
+	Dodanie zarejestrowanego użytkownika do bazy, zczytanie z bazy użytkownika
+	przy logowaniu
+DZIAŁANIE 3:
+	-Po wypełnieniu formularza i kliknięciu przycisku użytkownik zostaje
+	zalogowany/zarejestrowany
+	-Zwrócenie informacji o sukcesie/błędzie rejestracji/logowania
+	-Fromularz rejestracyjny skopiować ze starego formularza rejestracji
+	-Formularz logowania posiada pola na email i hasło oraz przyciski zaloguj i anuluj
+CEL 4: 
+	Działania użytkownika zalogowanego
+DZIAŁANIE 4:
+	-Po zalogowaniu na miejscu przycisków zaloguj/zarejestruj pojawiają się przyciski
+	wyloguj, profil
+	-Zalogowany Użytkownik jest w stanie zrezerwować bilet, formularz powinien automatycznie wypełnić
+	się danymi użytkownika pobranymi z tabeli logged_in_users, w razie potrzeby użytkownik aktualizuje dane
+	-W zakładce profil użytkownik może zmienić swoje dane lub dane zarezerwowanego biletu
+	-W zakładce rezerwacje użytkownik możę zmodyfikować zamówiony bilet(patrz cel 7)
+CEL 5:
+	Poprawki do osoby niezalogowanej
+DZIAŁANIE 5:
+	-Gdy niezalogowany użytkownik wybiera film, wyskakuje popup z logowaniem/rejestacją
+	-Gdy niezalogowany użytkownik próbuje przejść do zakładki rezerwacje
+	zamiast rezerwacji pokazuje się informacja o tym że należy się zalogować
+CEL 6:
+	Przypisanie biletów do użytkownika
+DZIAŁANIE 6:
+	-każdy bilet ma id użytkownika, gdy zalogowany użytkownik otworzy rezerwacje
+	należy pobrać id zalogowanego użytkownika z tabeli logged_in_users i pobrać bilety
+	z tabeli tickets o danym id
+
+CEL 7:
+	Modyfikacja zarezerwowanego biletu
+DZIAŁANIE 7:
+	-Należy odczytać dane wybranego biletu z bazy a następnie je zaktualizować
+	-Opcja anulowanie rezerwacji usuwa bilet z bazy danych
+CEL 8:
+	Wylogowanie
+DZIAŁANIE 8:
+	-Po kliknięciu przycisku wyloguj użytkownik zostaje przekierowany na stronę główną
+	-Wylogowanie powoduje usunięcie użytkownika z tabeli logged_in_users
+CEL 9:
+	Walidacja
+DZIAŁANIE 9:
+	Utworzenie walidacji danych zarówno od stony klienta(html) jak i serwera(filtry)
+CEL 10:
+	Poprawki
+DZIAŁANIE 10:
+	-Sprawdzenie zabezpieczeń gdy użytkownik jest zalogowany
+	-Poprawienie czytelności kodu

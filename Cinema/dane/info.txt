@@ -1,0 +1,14 @@
+<h2>INFORMACJE</h2><br>
+
+<h3>Ogólne</h3>
+<p>Nasza strona umożliwi ci oglądanie zarówno najnowyszch jak i starszych produkcji filmowych.
+Dodatkowo do każdego filmu przygotowane są customowe ustawienia, takie jak język dubbingu, napisy czy opcja 3D, które możesz
+dstosować do swoich preferencji. Filmy są rozpisane w repertuarze i odtwarzane o podanej godzinie
+dla każdej rezerwacji indywidualnie aby umożliwić dostosowanie do wybranych przez klienta opcji!</p><br>
+<br><br><h3>Rezerwacja biletów</h3>
+<ul>
+	<li>Bilet możne zarezerwować jedynie użytkownik zalogowany</li>
+	<li>Bilet można zarezerwować jedynie z conajmniej jednodniowym wyprzedziem</li>
+	<li>Płatność wykonywana jest automatycznie w dniu seansu</li>
+	<li>Dane każdego biletu można dowolnie edytować do przeddnia seansu</li>
+</ul>

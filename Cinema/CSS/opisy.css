@@ -1,0 +1,33 @@
+*{margin: 0; padding: 0;}
+
+#glowny {
+    display: flex;
+    flex-direction: row;
+}
+
+#plakat{
+    flex-basis: 30%;
+}
+
+#opis{
+    flex-basis: 60%;
+    margin: 0 10px;
+}
+
+@media screen and (max-width: 775px){
+    #glowny{
+        flex-direction: column;
+    }
+    
+    #plakat{
+        flex-basis: 60%;
+        width: 80%;
+        margin: 0 10%;
+    }
+    
+    #opis{
+        flex-basis: 40%;
+        width: 95%;
+        margin: 0 10px;
+    }
+}

@@ -1,0 +1,44 @@
+/* ogolne */
+.bg-modal-res, .bg-modal-reg, .bg-modal-log, .bg-modal-ed, .bg-modal-res-ed{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.modal-content-res, .modal-content-reg, .modal-content-log, .modal-content-ed, .modal-content-res-ed{
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.close{
+    margin: 0 20px;
+    float: right;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+/* rezerwacja */
+.modal-content-res, .modal-content-res-ed{
+    height: 375px;;
+}
+
+/* rejestracja */
+.modal-content-reg, .modal-content-ed{
+    height: 400px;
+}
+
+/* logowanie */
+.modal-content-log{
+    height: 250px;
+}

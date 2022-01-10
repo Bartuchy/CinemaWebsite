@@ -1,0 +1,112 @@
+<table id="rep">
+                            <caption><h2>REPERTUAR</h2></caption>
+                            
+                            <tbody>
+                                <tr>
+                                    <td>FILMY</td>
+                                    <td>przed południem</td>
+                                    <td>po południu</td>
+                                    <td>wieczorem</td>
+                                </tr>
+                            
+                                <tr>
+                                    <td class="tytul" data-nazwa="JGC">Jeden Gniewny Człowiek</td>
+                                    <td></td>
+                                    <td><a class="godzina">14:00</a></td>
+                                    <td><a class="godzina">21:00</a></td>
+                                </tr>
+                            
+                                <tr>
+                                    <td class="tytul" data-nazwa="CM2">Ciche Miejsce 2</td>
+                                    <td><a class="godzina">12:15</a></td>
+                                    <td><a class="godzina">15:15</a></td>
+                                    <td><a class="godzina">19:30</a></td>
+                                </tr>
+                            
+                                <tr>
+                                    <td class="tytul" data-nazwa="Cruella">Cruella</td>
+                                    <td><a class="godzina">10:10</a></td>
+                                    <td><a class="godzina">13:15</a></td>
+                                    <td></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="tytul" data-nazwa="MortalCombat">Mortal Combat</td>
+                                    <td></td>
+                                    <td><a class="godzina">16:00</a></td>
+                                    <td><a class="godzina">20:30</a></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="tytul" data-nazwa="DrugaPolowa">Druga Połowa</td>
+                                    <td><a class="godzina">11:00</a></td>
+                                    <td></td>
+                                    <td><a class="godzina">21:45</a></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="tytul" data-nazwa="CWDG">Co w Duszy Gra</td>
+                                    <td><a class="godzina">11:30</a></td>
+                                    <td><a class="godzina">14:00</a></td>
+                                    <td><a class="godzina">19:00</a></td>
+                                </tr>
+                            </tbody>
+				<script>
+                                console.log("rep");
+const tytuly = document.querySelectorAll("#dynamic table tbody tr td.tytul");
+
+tytuly.forEach(function(tytul){
+   tytul.addEventListener("click", function(){
+       const nazwa = tytul.dataset.nazwa;
+       let sciezka;
+       
+       switch(nazwa){
+               
+           case 'JGC':
+               sciezka = "plakaty/JGC.png";
+               break;
+               
+            case 'CM2':
+               sciezka = "plakaty/CM2.jfif";
+               break;
+               
+            case 'Cruella':
+               sciezka = "plakaty/Cruella.jpg";
+               break;
+               
+            case 'MortalCombat':
+               sciezka = "plakaty/MortalCombat.jpg";
+               break;
+               
+            case 'DrugaPolowa':
+               sciezka = "plakaty/DrugaPolowa.jpg";
+               break;
+               
+            case 'CWDG':
+               sciezka = "plakaty/CWDG.jpg";
+               break;
+       }
+       
+       sessionStorage.setItem("sciezka",sciezka);
+       sessionStorage.setItem("nazwa", nazwa);
+       window.location.href="Opisy.html";
+       
+   }) 
+});
+                                
+                                console.log("popup");
+const godziny = document.querySelectorAll("a.godzina");
+
+godziny.forEach(function(godzina){
+   godzina.addEventListener('click', function(){
+       document.querySelector('.bg-modal-reg').style.display = 'block'; 
+       document.querySelector('body').style.overflow = "hidden";
+   }) 
+});
+
+document.querySelector('.close').addEventListener('click', function(){
+    document.querySelector('.bg-modal-res').style.display = 'none';
+    document.querySelector('body').style.overflow = "visible";
+});
+                            </script>
+                        </table>

@@ -1,0 +1,31 @@
+<table id="cen">
+            <caption><h2>CENNIK</h2></caption>
+            
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>4 lub więcej dni do seansu</td>
+                    <td>3 dni do seansu</td>
+                    <td>2 dni do seansu</td>
+                    <td>1 dzień do seansu</td>
+                </tr>
+                
+                <tr>
+                    <td>Bilet Normalny</td>
+                    <td>15 zł</td>
+                    <td>18 zł</td>
+                    <td>21 zł</td>
+                    <td>25 zł</td>
+                </tr>
+                
+                <tr>
+                    <td>Bilet Ulgowy</td>
+                    <td>12 zł</td>
+                    <td>15 zł</td>
+                    <td>18 zł</td>
+                    <td>22 zł</td>
+                </tr>
+            
+            </tbody>
+        
+        </table>
